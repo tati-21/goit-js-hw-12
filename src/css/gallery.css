@@ -31,7 +31,8 @@
   border-color: #4e75ff;
 }
 
-.form button {
+.form button,
+.load-more {
   height: 40px;
   padding: 8px 16px;
   border: none;
@@ -45,7 +46,8 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form button:hover {
+.form button:hover,
+.load-more:hover {
   background-color: #6c8cff;
 }
 
@@ -55,7 +57,7 @@
   justify-content: center;
   gap: 24px;
   max-width: 1128px;
-  margin: 0 auto;
+  margin: 0 auto 32px;
 }
 
 .gallery-item {
@@ -93,12 +95,21 @@
   font-weight: 600;
 }
 
+.load-more {
+  display: none;
+  margin: 0 auto 32px;
+}
+
+.load-more.is-visible {
+  display: block;
+}
+
 /* Loader from css-loader (cssloaders.github.io) */
 .loader {
   display: none;
   width: 48px;
   height: 48px;
-  margin: 0 auto 32px;
+  margin: 0 auto;
   border: 5px solid #4e75ff;
   border-bottom-color: transparent;
   border-radius: 50%;
